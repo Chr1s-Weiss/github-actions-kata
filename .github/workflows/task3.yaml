@@ -1,7 +1,7 @@
 name: github-actions-kata
 on:
   pull_request:
-    path: "desktop-app/**.tsx?"
+    paths: "desktop-app/**.tsx?"
 
 jobs:
   print-basic-information:
