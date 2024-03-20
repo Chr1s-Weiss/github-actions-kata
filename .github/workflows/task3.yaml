@@ -1,0 +1,20 @@
+name: github-actions-kata
+on:
+  pull_request:
+    paths:
+      - "desktop-app/**.ts"
+
+jobs:
+  unit-tests-on-ts-change:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: "npm"
+          cache-dependency-path: desktop-app
+      - run: |
+          cd desktop-app
+          npm ci
+          npm test
