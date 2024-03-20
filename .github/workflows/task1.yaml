@@ -1,0 +1,9 @@
+name: github-actions-kata
+on:
+  push:
+    jobs:
+      print-basic-information:
+        runs-on: ubuntu-latest
+          steps:
+            - uses: actions/checkout@v4
+            - run: ls -al
