@@ -4,6 +4,6 @@ on:
     jobs:
       print-basic-information:
         runs-on: ubuntu-latest
-          steps:
-            - uses: actions/checkout@v4
-            - run: ls -al
+        steps:
+          - uses: actions/checkout@v4
+          - run: ls -al
