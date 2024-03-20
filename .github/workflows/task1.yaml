@@ -8,4 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: ls -al
-      - run: echo "${{github.ref}}"
+      - run: echo "Branch: ${{github.ref_name}}"
+      - run: echo "Commit ref: ${{github.sha}}"
